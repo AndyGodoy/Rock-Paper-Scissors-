@@ -5,9 +5,9 @@
 // We offer another round
 
 function playGame{
-    var playerWins;
-    var playerLosses;
-    var playerTies;
+    var playerWins = 0;
+    var playerLosses = 0;
+    var playerTies = 0;
     var playerMove;
     var computerMove;
 
@@ -22,9 +22,38 @@ function playGame{
         playerMove = prompt("Please enter your choice below (Must be Rock, Paper, or Scissors)");
         computerMove = possibleMoves[getRandomInt]
         // if playermove === computermove, TIE
-        if (){
-
+        if (playerMove === computerMove){
+            playerTies++;
+            alert(We tied!);
+            return;
         }
+        if (playerMove === "Rock"){
+            if (computerMove === "Scissors"){
+                //player wins
+            }
+            else{
+                //player loses
+            }
+        }
+        if (playerMove === "Paper"){
+            if (computerMove === "Rock"){
+                //player wins
+            }
+            else{
+                //player loses
+            }
+        }
+        if (playerMove === "Scissors"){
+            if (computerMove === "Paper"){
+                //player wins
+            }
+            else{
+                //player loses
+            }
+        }
+
+        // alert that tells them their win/loss/tie count
+        alert("Wins: " + playerWins + "Losses: " + playerLosses + "Ties: " + playerTies);
         //if player hits 'cancel', break loop
     }
 }
